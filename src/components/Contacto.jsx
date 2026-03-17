@@ -1,4 +1,4 @@
-import { MessageCircle, Clock, MapPin, Instagram } from 'lucide-react'
+import { MessageCircle, MapPin } from 'lucide-react'
 import { useLang } from '../LanguageContext'
 
 // ─── CONFIGURACIÓN ───────────────────────────────────────────────────────────
@@ -53,7 +53,7 @@ export default function Contacto() {
 
           {/* Info */}
           <div className="flex flex-col gap-6">
-            {/* Horario */}
+            {/* Horario — comentado: el estudio trabaja por citas, sin horario fijo
             <div className="bg-[#1a1a1a] border border-gray-800 p-6">
               <div className="flex items-center gap-2 mb-4">
                 <Clock size={18} className="text-[#b91c1c]" />
@@ -70,6 +70,7 @@ export default function Contacto() {
                 ))}
               </ul>
             </div>
+            */}
 
             {/* Ubicación */}
             <div className="bg-[#1a1a1a] border border-gray-800 p-6">
