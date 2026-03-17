@@ -18,9 +18,9 @@ export default function Contacto() {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-4 mb-6">
-            <span className="block h-px w-16 bg-[#a855f7]" />
-            <span className="text-[#a855f7] text-xs tracking-[0.4em] uppercase">{t.contacto.tag}</span>
-            <span className="block h-px w-16 bg-[#a855f7]" />
+            <span className="block h-px w-16 bg-[#b91c1c]" />
+            <span className="text-[#b91c1c] text-xs tracking-[0.4em] uppercase">{t.contacto.tag}</span>
+            <span className="block h-px w-16 bg-[#b91c1c]" />
           </div>
           <h2 className="font-display text-5xl md:text-7xl text-white tracking-wider mb-4">
             {t.contacto.titulo}
@@ -56,7 +56,7 @@ export default function Contacto() {
             {/* Horario */}
             <div className="bg-[#1a1a1a] border border-gray-800 p-6">
               <div className="flex items-center gap-2 mb-4">
-                <Clock size={18} className="text-[#a855f7]" />
+                <Clock size={18} className="text-[#b91c1c]" />
                 <h3 className="text-white font-semibold tracking-wide">{t.contacto.horario}</h3>
               </div>
               <ul className="flex flex-col gap-2">
@@ -74,30 +74,25 @@ export default function Contacto() {
             {/* Ubicación */}
             <div className="bg-[#1a1a1a] border border-gray-800 p-6">
               <div className="flex items-center gap-2 mb-3">
-                <MapPin size={18} className="text-[#a855f7]" />
+                <MapPin size={18} className="text-[#b91c1c]" />
                 <h3 className="text-white font-semibold tracking-wide">{t.contacto.ubicacion}</h3>
               </div>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-400 text-sm leading-relaxed mb-4">
                 C/ del Poeta Ricard Sanmartí, 4<br />
                 Benimaclet, 46020 València
               </p>
+              <iframe
+                title="Arpia Tattoo"
+                src="https://maps.google.com/maps?q=C%2F+del+Poeta+Ricard+Sanmart%C3%AD%2C+4%2C+Benimaclet%2C+46020+Val%C3%A8ncia&output=embed"
+                width="100%"
+                height="180"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
 
-            {/* Instagram */}
-            <div className="bg-[#1a1a1a] border border-gray-800 p-6">
-              <div className="flex items-center gap-2 mb-3">
-                <Instagram size={18} className="text-[#a855f7]" />
-                <h3 className="text-white font-semibold tracking-wide">Instagram</h3>
-              </div>
-              <a
-                href={`https://instagram.com/${INSTAGRAM_USERNAME}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#a855f7] text-sm hover:underline"
-              >
-                @{INSTAGRAM_USERNAME}
-              </a>
-            </div>
           </div>
         </div>
       </div>

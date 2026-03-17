@@ -10,12 +10,12 @@ import { useLang } from '../LanguageContext'
 //   3. Obtener un access token de larga duración (Long-Lived Token)
 //   4. Pegar el token en INSTAGRAM_TOKEN y el username en INSTAGRAM_USERNAME
 // ─────────────────────────────────────────────────────────────────────────────
-const INSTAGRAM_TOKEN = '' // <-- pega aquí el access token
+const INSTAGRAM_TOKEN = import.meta.env.VITE_INSTAGRAM_TOKEN || ''
 const INSTAGRAM_USERNAME = 'arpiatattoo' // <-- username de Instagram
 
 const PLACEHOLDER_POSTS = Array.from({ length: 9 }, (_, i) => ({
   id: String(i),
-  media_url: `https://placehold.co/800x800/1a1a1a/a855f7?text=Trabajo+${i + 1}`,
+  media_url: `https://placehold.co/800x800/1a1a1a/b91c1c?text=Trabajo+${i + 1}`,
   permalink: '#',
   media_type: 'IMAGE',
   caption: `Trabajo ${i + 1} del estudio`,
@@ -91,7 +91,7 @@ function Lightbox({ posts, index, onClose, onPrev, onNext }) {
             href={post.permalink}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-3 inline-flex items-center gap-1 text-[#a855f7] text-xs hover:underline"
+            className="mt-3 inline-flex items-center gap-1 text-[#b91c1c] text-xs hover:underline"
           >
             <ExternalLink size={12} />
             Ver en Instagram
@@ -157,9 +157,9 @@ export default function InstagramFeed() {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-4 mb-6">
-            <span className="block h-px w-16 bg-[#a855f7]" />
-            <span className="text-[#a855f7] text-xs tracking-[0.4em] uppercase">{t.trabajos.tag}</span>
-            <span className="block h-px w-16 bg-[#a855f7]" />
+            <span className="block h-px w-16 bg-[#b91c1c]" />
+            <span className="text-[#b91c1c] text-xs tracking-[0.4em] uppercase">{t.trabajos.tag}</span>
+            <span className="block h-px w-16 bg-[#b91c1c]" />
           </div>
           <h2 className="font-display text-5xl md:text-7xl text-white tracking-wider mb-4">
             {t.trabajos.titulo}
@@ -168,7 +168,7 @@ export default function InstagramFeed() {
             href={`https://instagram.com/${INSTAGRAM_USERNAME}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-[#a855f7] hover:underline text-sm tracking-widest uppercase"
+            className="inline-flex items-center gap-2 text-[#b91c1c] hover:underline text-sm tracking-widest uppercase"
           >
             <Instagram size={16} />
             @{INSTAGRAM_USERNAME}
@@ -198,7 +198,7 @@ export default function InstagramFeed() {
               <button
                 key={post.id}
                 onClick={() => openLightbox(i)}
-                className="group relative aspect-square overflow-hidden bg-[#1a1a1a] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#a855f7]"
+                className="group relative aspect-square overflow-hidden bg-[#1a1a1a] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#b91c1c]"
               >
                 <img
                   src={post.media_type === 'VIDEO' ? post.thumbnail_url : post.media_url}
@@ -223,7 +223,7 @@ export default function InstagramFeed() {
             href={`https://instagram.com/${INSTAGRAM_USERNAME}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-3 border border-[#a855f7] text-[#a855f7] font-semibold tracking-widest uppercase text-sm hover:bg-[#a855f7]/10 transition-colors duration-200"
+            className="inline-flex items-center gap-2 px-8 py-3 border border-[#b91c1c] text-[#b91c1c] font-semibold tracking-widest uppercase text-sm hover:bg-[#b91c1c]/10 transition-colors duration-200"
           >
             <Instagram size={16} />
             {t.trabajos.verMas}
