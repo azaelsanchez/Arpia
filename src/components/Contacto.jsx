@@ -84,7 +84,7 @@ export default function Contacto() {
               </p>
               <iframe
                 title="Arpia Tattoo"
-                src="https://maps.google.com/maps?q=C%2F+del+Poeta+Ricard+Sanmart%C3%AD%2C+4%2C+Benimaclet%2C+46020+Val%C3%A8ncia&output=embed"
+                src="https://maps.google.com/maps?q=Arpia+Tattoo+Valencia&output=embed"
                 width="100%"
                 height="180"
                 style={{ border: 0 }}
