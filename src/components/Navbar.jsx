@@ -31,13 +31,13 @@ export default function Navbar() {
         scrolled ? 'bg-[#0d0d0d]/95 backdrop-blur-sm shadow-lg shadow-black/30' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-3">
           <img
             src={logo}
             alt="Arpia Tattoo logo"
-            className="h-28 w-auto invert"
+            className="h-36 w-auto invert"
           />
         </a>
 
