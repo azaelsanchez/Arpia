@@ -2,16 +2,7 @@ import { useEffect, useState, useCallback } from 'react'
 import { Instagram, AlertCircle, X, ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react'
 import { useLang } from '../LanguageContext'
 
-// ─────────────────────────────────────────────────────────────────────────────
-// CONFIGURACIÓN
-// Para activar el feed real de Instagram:
-//   1. La cuenta debe ser Business o Creator en Instagram
-//   2. Crear una app en https://developers.facebook.com
-//   3. Obtener un access token de larga duración (Long-Lived Token)
-//   4. Pegar el token en INSTAGRAM_TOKEN y el username en INSTAGRAM_USERNAME
-// ─────────────────────────────────────────────────────────────────────────────
-const INSTAGRAM_TOKEN = import.meta.env.VITE_INSTAGRAM_TOKEN || ''
-const INSTAGRAM_USERNAME = 'arpiatattoo' // <-- username de Instagram
+const INSTAGRAM_USERNAME = 'arpiatattoo'
 
 const PLACEHOLDER_POSTS = Array.from({ length: 9 }, (_, i) => ({
   id: String(i),
@@ -21,10 +12,8 @@ const PLACEHOLDER_POSTS = Array.from({ length: 9 }, (_, i) => ({
   caption: `Trabajo ${i + 1} del estudio`,
 }))
 
-async function fetchInstagramPosts(token) {
-  const fields = 'id,media_url,thumbnail_url,permalink,media_type,caption'
-  const url = `https://graph.instagram.com/me/media?fields=${fields}&access_token=${token}`
-  const res = await fetch(url)
+async function fetchInstagramPosts() {
+  const res = await fetch('/api/instagram')
   if (!res.ok) throw new Error('Error al cargar Instagram')
   const data = await res.json()
   return data.data.filter((p) => p.media_type !== 'VIDEO' || p.thumbnail_url)
@@ -131,17 +120,10 @@ export default function InstagramFeed() {
   const { t } = useLang()
 
   useEffect(() => {
-    if (INSTAGRAM_TOKEN) {
-      fetchInstagramPosts(INSTAGRAM_TOKEN)
-        .then((data) => setPosts(data.slice(0, 9)))
-        .catch(() => setPosts(PLACEHOLDER_POSTS))
-        .finally(() => setLoading(false))
-    } else {
-      setTimeout(() => {
-        setPosts(PLACEHOLDER_POSTS)
-        setLoading(false)
-      }, 400)
-    }
+    fetchInstagramPosts()
+      .then((data) => setPosts(data.slice(0, 9)))
+      .catch(() => setPosts(PLACEHOLDER_POSTS))
+      .finally(() => setLoading(false))
   }, [])
 
   const openLightbox = (index) => setLightboxIndex(index)
@@ -175,15 +157,6 @@ export default function InstagramFeed() {
           </a>
         </div>
 
-        {/* Aviso si no hay token */}
-        {!INSTAGRAM_TOKEN && (
-          <div className="mb-8 flex items-start gap-3 bg-[#1a1a1a] border border-yellow-700/40 rounded p-4 max-w-xl mx-auto">
-            <AlertCircle size={18} className="text-yellow-500 mt-0.5 shrink-0" />
-            <p className="text-yellow-200/70 text-sm leading-relaxed">
-              {t.trabajos.avisoToken}
-            </p>
-          </div>
-        )}
 
         {/* Grid */}
         {loading ? (
