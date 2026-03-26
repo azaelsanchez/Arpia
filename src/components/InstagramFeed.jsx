@@ -196,7 +196,7 @@ export default function InstagramFeed() {
             href={`https://instagram.com/${INSTAGRAM_USERNAME}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-3 border border-[#b91c1c] text-[#b91c1c] font-semibold tracking-widest uppercase text-sm hover:bg-[#b91c1c]/10 transition-colors duration-200"
+            className="inline-flex items-center gap-2 px-8 py-3 border border-[#b91c1c] text-[#b91c1c] font-semibold tracking-widest uppercase text-sm hover:bg-[#b91c1c]/10 hover:scale-105 hover:shadow-lg hover:shadow-[#b91c1c]/30 transition-all duration-200"
           >
             <Instagram size={16} />
             {t.trabajos.verMas}

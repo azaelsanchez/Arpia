@@ -44,13 +44,13 @@ export default function QuienesSomos() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <a
               href="#artistas"
-              className="px-8 py-3 bg-[#b91c1c] text-black font-semibold tracking-widest uppercase text-sm hover:bg-[#9333ea] transition-colors duration-200"
+              className="px-8 py-3 bg-[#b91c1c] text-black font-semibold tracking-widest uppercase text-sm hover:bg-[#991b1b] hover:scale-105 hover:shadow-lg hover:shadow-[#b91c1c]/40 transition-all duration-200"
             >
               {t.quienes.btnArtistas}
             </a>
             <a
               href="#contacto"
-              className="px-8 py-3 border border-[#b91c1c] text-[#b91c1c] font-semibold tracking-widest uppercase text-sm hover:bg-[#b91c1c]/10 transition-colors duration-200"
+              className="px-8 py-3 border border-[#b91c1c] text-[#b91c1c] font-semibold tracking-widest uppercase text-sm hover:bg-[#b91c1c]/10 hover:scale-105 hover:shadow-lg hover:shadow-[#b91c1c]/30 transition-all duration-200"
             >
               {t.quienes.btnCita}
             </a>

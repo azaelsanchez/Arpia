@@ -44,7 +44,7 @@ export default function Contacto() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-[#25D366] text-black font-bold tracking-widest uppercase text-sm hover:bg-[#1ebe5a] transition-colors duration-200"
+              className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-[#25D366] text-black font-bold tracking-widest uppercase text-sm hover:bg-[#1ebe5a] hover:scale-105 hover:shadow-lg hover:shadow-[#25D366]/40 transition-all duration-200"
             >
               <MessageCircle size={18} />
               {t.contacto.whatsappBtn}
