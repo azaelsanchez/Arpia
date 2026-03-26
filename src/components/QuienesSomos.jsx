@@ -63,7 +63,7 @@ export default function QuienesSomos() {
           <img
             src={nosotros}
             alt="Arpia Tattoo estudio"
-            className="relative w-full h-[500px] object-cover border border-[#b91c1c]/20" style={{ objectPosition: 'center -15px' }}
+            className="relative w-full h-[600px] object-cover border border-[#b91c1c]/20" style={{ objectPosition: 'center -5px' }}
           />
         </div>
 
