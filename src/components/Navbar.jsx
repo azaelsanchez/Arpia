@@ -37,7 +37,7 @@ export default function Navbar() {
           <img
             src={logo}
             alt="Arpia Tattoo logo"
-            className="h-36 w-auto invert"
+            className="h-36 w-auto invert drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
           />
         </a>
 

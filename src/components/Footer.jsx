@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#0d0d0d] border-t border-gray-800 py-10 px-6">
       <div className="max-w-6xl mx-auto flex flex-col items-center gap-4 text-sm text-gray-600">
-        <img src={logoFoot} alt="Arpia Tattoo" className="h-36 w-auto invert" />
+        <img src={logoFoot} alt="Arpia Tattoo" className="h-36 w-auto invert drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]" />
         <p>© {new Date().getFullYear()} Arpia Tattoo. {t.footer.derechos}</p>
         <p className="text-gray-700 text-xs">
           Desarrollado por{' '}
