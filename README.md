@@ -12,7 +12,7 @@
 - 🖼️ **Lightbox** — galería de trabajos con navegación entre imágenes (teclado y click)
 - 📱 **Responsive** — menú hamburger en móvil, adaptado a todos los tamaños
 - 💬 **Contacto por WhatsApp** — botón directo sin formularios
-- 🎨 **Tema oscuro** con acentos morados
+- 🎨 **Tema oscuro** con acentos en rojo
 
 ---
 
@@ -21,9 +21,9 @@
 | Sección | Descripción |
 |---|---|
 | **Quiénes somos** | Presentación del estudio con foto |
-| **Artistas** | Sofía, Cristina, Mark y Cristian con sus perfiles |
+| **Artistas** | Cards con flip de cada artista/servicio |
 | **Trabajos** | Feed de Instagram con lightbox |
-| **Contacto** | WhatsApp, horario y ubicación |
+| **Contacto** | WhatsApp y ubicación en mapa |
 
 ---
 
@@ -45,17 +45,12 @@ npm run build
 ## 📸 Conectar Instagram (feed en tiempo real)
 
 La cuenta de Instagram debe ser **Creator o Business**.
-Una vez configurada, sigue estos pasos:
+El token **nunca se expone al frontend** — pasa por una Vercel Function (`api/instagram.js`) que hace de proxy.
 
-1. Crea una app en [developers.facebook.com](https://developers.facebook.com)
-2. Añade el producto **Instagram Graph API**
-3. Genera un **Long-Lived Access Token**
-4. Abre `src/components/InstagramFeed.jsx` y rellena:
+Consulta el archivo `INSTAGRAM_SETUP.txt` para los pasos completos.
 
-```js
-const INSTAGRAM_TOKEN = 'TU_TOKEN_AQUI'
-const INSTAGRAM_USERNAME = 'arpiatattoo'
-```
+En producción, añade la variable en Vercel:
+- **Settings → Environment Variables → `INSTAGRAM_TOKEN`**
 
 ---
 
@@ -63,7 +58,7 @@ const INSTAGRAM_USERNAME = 'arpiatattoo'
 
 | Tecnología | Versión |
 |---|---|
-| React | 19 |
+| React | 19.2 |
 | Vite | 8 |
 | Tailwind CSS | 3 |
 | Lucide React | latest |
@@ -78,13 +73,15 @@ src/
 ├── components/
 │   ├── Navbar.jsx       # Navegación + selector de idioma
 │   ├── QuienesSomos.jsx # Sección hero con foto del estudio
-│   ├── Artistas.jsx     # Cards de los artistas
+│   ├── Artistas.jsx     # Cards de los artistas (efecto flip)
 │   ├── InstagramFeed.jsx# Galería + lightbox
-│   ├── Contacto.jsx     # WhatsApp + horario + ubicación
+│   ├── Contacto.jsx     # WhatsApp + ubicación
 │   └── Footer.jsx       # Pie de página
 ├── i18n.js              # Textos en ES y EN
 ├── LanguageContext.jsx  # Contexto de idioma global
 └── App.jsx
+api/
+└── instagram.js         # Vercel Function proxy para Instagram
 ```
 
 ---
@@ -97,16 +94,14 @@ src/
 |---|---|
 | 📱 WhatsApp | [+34 611 466 867](https://wa.me/34611466867) |
 | 📸 Instagram | [@arpiatattoo](https://instagram.com/arpiatattoo) |
-| 🕐 Lunes–Viernes | 11:00 – 20:00 |
-| 🕐 Sábado | 11:00 – 18:00 |
 
 ---
 
-## 👥 Artistas
+## 👥 Equipo
 
 | Nombre | Especialidad | Instagram |
 |---|---|---|
-| Sofía | Tatuadora | [@sofiaspiral](https://instagram.com/sofiaspiral) |
-| Cristina | Tatuadora | [@crisstinacastillo_](https://instagram.com/crisstinacastillo_) |
-| Mark | Tatuador | [@krea.Imk](https://instagram.com/krea.Imk) |
-| Cristian | Eliminación de tatuajes | [@controlzeta_laser](https://instagram.com/controlzeta_laser) |
+| Sofía Spiral | Tatuadora | [@sofiaspiral](https://instagram.com/sofiaspiral) |
+| Cristina Castillo | Tatuadora | [@crisstinacastillo_](https://instagram.com/crisstinacastillo_) |
+| Krea | Tatuador | [@krea.lmk](https://instagram.com/krea.lmk) |
+| Control Zeta | Eliminación de tatuajes | [@controlzeta_laser](https://instagram.com/controlzeta_laser) |
