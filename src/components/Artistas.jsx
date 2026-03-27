@@ -5,6 +5,7 @@ import imgSofia from '../assets/sofia.jpeg'
 import imgCristina from '../assets/cristina.jpeg'
 import imgMark from '../assets/mark.jpeg'
 import imgCristian from '../assets/cristian.jpeg'
+import imgHari from '../assets/hari.jpeg'
 
 const artistas = [
   {
@@ -36,6 +37,14 @@ const artistas = [
     especialidad: { es: 'Eliminación de tatuajes', en: 'Tattoo Removal' },
     instagram: 'controlzeta_laser',
     img: imgCristian,
+    descripcion: { es: 'Pendiente de rellenar.', en: 'Coming soon.' },
+    estilos: { es: 'Pendiente de rellenar', en: 'Coming soon' },
+  },
+  {
+    nombre: 'Hari Piercing',
+    especialidad: { es: 'Piercing', en: 'Piercing Artist' },
+    instagram: 'haripiercing',
+    img: imgHari,
     descripcion: { es: 'Pendiente de rellenar.', en: 'Coming soon.' },
     estilos: { es: 'Pendiente de rellenar', en: 'Coming soon' },
   },
@@ -159,8 +168,13 @@ export default function Artistas() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {artistas.map((artista) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {artistas.slice(0, 3).map((artista) => (
+            <ArtistaCard key={artista.nombre} artista={artista} lang={lang} />
+          ))}
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mt-6 lg:w-2/3 lg:mx-auto">
+          {artistas.slice(3).map((artista) => (
             <ArtistaCard key={artista.nombre} artista={artista} lang={lang} />
           ))}
         </div>
