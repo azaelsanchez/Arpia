@@ -1,5 +1,5 @@
-import { useEffect, useState, useCallback } from 'react'
-import { Instagram, AlertCircle, X, ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react'
+import { useEffect, useState, useCallback, useRef } from 'react'
+import { Instagram, AlertCircle, X, ChevronLeft, ChevronRight, ExternalLink, Play } from 'lucide-react'
 import { useLang } from '../LanguageContext'
 
 const INSTAGRAM_USERNAME = 'arpiatattoo'
@@ -40,7 +40,8 @@ function Lightbox({ posts, index, onClose, onPrev, onNext }) {
     return () => { document.body.style.overflow = '' }
   }, [])
 
-  const imgSrc = post.media_type === 'VIDEO' ? post.thumbnail_url : post.media_url
+  const isVideo = post.media_type === 'VIDEO'
+  const videoRef = useRef(null)
 
   return (
     <div
@@ -61,12 +62,23 @@ function Lightbox({ posts, index, onClose, onPrev, onNext }) {
           <X size={28} />
         </button>
 
-        {/* Imagen */}
-        <img
-          src={imgSrc}
-          alt={post.caption || 'Trabajo de tatuaje'}
-          className="max-h-[80vh] w-full object-contain"
-        />
+        {/* Imagen o vídeo */}
+        {isVideo ? (
+          <video
+            ref={videoRef}
+            src={post.media_url}
+            poster={post.thumbnail_url}
+            controls
+            autoPlay
+            className="max-h-[80vh] w-full object-contain"
+          />
+        ) : (
+          <img
+            src={post.media_url}
+            alt={post.caption || 'Trabajo de tatuaje'}
+            className="max-h-[80vh] w-full object-contain"
+          />
+        )}
 
         {/* Caption + link Instagram */}
         {post.caption && post.caption !== 'Trabajo del estudio' && (
@@ -179,6 +191,13 @@ export default function InstagramFeed() {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
+                {post.media_type === 'VIDEO' && (
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div className="bg-black/50 rounded-full p-3 group-hover:bg-black/70 transition-colors duration-300">
+                      <Play size={24} className="text-white fill-white" />
+                    </div>
+                  </div>
+                )}
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300 flex items-center justify-center">
                   <Instagram
                     size={28}
