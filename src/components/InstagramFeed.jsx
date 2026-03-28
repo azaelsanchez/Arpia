@@ -1,5 +1,5 @@
 import { useEffect, useState, useCallback, useRef } from 'react'
-import { Instagram, AlertCircle, X, ChevronLeft, ChevronRight, ExternalLink, Play } from 'lucide-react'
+import { Instagram, X, ChevronLeft, ChevronRight, ExternalLink, Play, ZoomIn } from 'lucide-react'
 import { useLang } from '../LanguageContext'
 
 const INSTAGRAM_USERNAME = 'arpiatattoo'
@@ -198,9 +198,9 @@ export default function InstagramFeed() {
                     </div>
                   </div>
                 )}
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300 flex items-center justify-center">
-                  <Instagram
-                    size={28}
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300 flex items-end justify-end p-3">
+                  <ZoomIn
+                    size={22}
                     className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
