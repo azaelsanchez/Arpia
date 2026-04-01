@@ -5,7 +5,7 @@ import imgSofia from '../assets/sofia.jpeg'
 import imgCristina from '../assets/cristina.jpeg'
 import imgMark from '../assets/mark.jpeg'
 import imgCristian from '../assets/cristian.jpeg'
-import imgHari from '../assets/hari.jpeg'
+import imgHari from '../assets/logohari.jpeg'
 
 const artistas = [
   {
