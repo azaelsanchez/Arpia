@@ -22,7 +22,7 @@ export default function Contacto() {
             <span className="text-[#b91c1c] text-xs tracking-[0.4em] uppercase">{t.contacto.tag}</span>
             <span className="block h-px w-16 bg-[#b91c1c]" />
           </div>
-          <h2 className="font-display text-5xl md:text-7xl text-white tracking-wider mb-4">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-7xl text-white tracking-wider mb-4">
             {t.contacto.titulo}
           </h2>
           <p className="text-gray-400 max-w-lg mx-auto text-base leading-relaxed">
@@ -32,7 +32,7 @@ export default function Contacto() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           {/* WhatsApp CTA */}
-          <div className="bg-[#1a1a1a] border border-gray-800 p-8 flex flex-col items-center text-center">
+          <div className="bg-[#1a1a1a] border border-gray-800 p-6 md:p-8 flex flex-col items-center text-center">
             <div className="w-16 h-16 rounded-full bg-[#25D366]/10 flex items-center justify-center mb-5">
               <MessageCircle size={32} className="text-[#25D366]" />
             </div>

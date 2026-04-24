@@ -155,7 +155,7 @@ export default function InstagramFeed() {
             <span className="text-[#b91c1c] text-xs tracking-[0.4em] uppercase">{t.trabajos.tag}</span>
             <span className="block h-px w-16 bg-[#b91c1c]" />
           </div>
-          <h2 className="font-display text-5xl md:text-7xl text-white tracking-wider mb-4">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-7xl text-white tracking-wider mb-4">
             {t.trabajos.titulo}
           </h2>
           <a

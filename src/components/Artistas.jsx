@@ -37,16 +37,29 @@ const artistas = [
     especialidad: { es: 'Eliminación de tatuajes', en: 'Tattoo Removal' },
     instagram: 'controlzeta_laser',
     img: imgCristian,
-    descripcion: { es: 'Pendiente de rellenar.', en: 'Coming soon.' },
-    estilos: { es: 'Pendiente de rellenar', en: 'Coming soon' },
+    descripcion: {
+      es: 'Técnico especialista en eliminación de tatuajes con 6 años de experiencia. Te asesorará en cada sesión: evolución, curación y tiempos de espera.',
+      en: 'Tattoo removal specialist with 6 years of experience. He will guide you through every session: progress, aftercare and waiting times.',
+    },
+    estilosLabel: { es: 'Tecnología con Láser Médico', en: 'Medical Laser Technology' },
+    estilos: {
+      es: 'Láser Q-Switched ND:YAG con certificación médica europea. Potente, eficiente y seguro. Sin marcas ni daños en la piel.',
+      en: 'Q-Switched ND:YAG laser with European medical certification. Powerful, efficient and safe. No marks or skin damage.',
+    },
   },
   {
     nombre: 'Hari Piercing',
     especialidad: { es: 'Piercing', en: 'Piercing Artist' },
     instagram: 'haripiercing',
     img: imgHari,
-    descripcion: { es: 'Pendiente de rellenar.', en: 'Coming soon.' },
-    estilos: { es: 'Pendiente de rellenar', en: 'Coming soon' },
+    descripcion: {
+      es: 'Sofía, con más de 10 años de experiencia en el sector del piercing, y Cristian con su meticulosidad y perfeccionismo harán que tus perforaciones siempre estén en el sitio perfecto, de la forma perfecta y con la joya perfecta.',
+      en: 'Sofía, with over 10 years of experience in piercing, and Cristian with his precision and perfectionism, will ensure your piercings are always placed in exactly the right spot, in the perfect way, with the perfect jewel.',
+    },
+    estilos: {
+      es: 'Aguja americana · Joyería de titanio grado implante · Gran variedad de formas, brillos, piedras naturales y colores.',
+      en: 'American needle · Implant-grade titanium jewellery · Wide variety of shapes, finishes, natural stones and colours.',
+    },
   },
 ]
 
@@ -69,7 +82,7 @@ function ArtistaCard({ artista, lang }) {
 
   return (
     <div
-      className="flip-card h-[420px] cursor-pointer"
+      className="flip-card h-[500px] cursor-pointer"
       onClick={handleClick}
     >
       <div className={`flip-card-inner ${flipped ? 'flipped' : ''}`}>
@@ -79,7 +92,7 @@ function ArtistaCard({ artista, lang }) {
           <img
             src={artista.img}
             alt={artista.nombre}
-            className="w-full h-72 object-cover object-top"
+            className="w-full h-80 object-cover object-top"
           />
           <div className="p-5 flex items-center justify-between">
             <div>
@@ -123,7 +136,7 @@ function ArtistaCard({ artista, lang }) {
               </p>
               <div className="border-t border-white/10 pt-4">
                 <p className="text-[#b91c1c] text-xs tracking-widest uppercase mb-1">
-                  {lang === 'es' ? 'Estilos' : 'Styles'}
+                  {artista.estilosLabel ? artista.estilosLabel[lang] : (lang === 'es' ? 'Estilos' : 'Styles')}
                 </p>
                 <p className="text-gray-400 text-sm">{artista.estilos[lang]}</p>
               </div>
@@ -159,7 +172,7 @@ export default function Artistas() {
             <span className="text-[#b91c1c] text-xs tracking-[0.4em] uppercase">{t.artistas.tag}</span>
             <span className="block h-px w-16 bg-[#b91c1c]" />
           </div>
-          <h2 className="font-display text-5xl md:text-7xl text-white tracking-wider">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-7xl text-white tracking-wider">
             {t.artistas.titulo}
           </h2>
           <p className="text-gray-500 mt-4 max-w-xl mx-auto">

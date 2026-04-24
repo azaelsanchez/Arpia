@@ -17,7 +17,7 @@ export default function QuienesSomos() {
         }}
       />
 
-      <div className="relative max-w-6xl mx-auto px-6 py-32 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="relative max-w-6xl mx-auto px-6 py-20 lg:py-32 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
         {/* Texto */}
         <div className="text-center lg:text-left">
@@ -26,7 +26,7 @@ export default function QuienesSomos() {
             <span className="text-[#b91c1c] text-xs tracking-[0.4em] uppercase">{t.quienes.tag}</span>
           </div>
 
-          <h1 className="font-display text-6xl md:text-7xl text-white tracking-wider mb-8 leading-none">
+          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl text-white tracking-wider mb-8 leading-none">
             {t.quienes.titulo}
           </h1>
 
@@ -63,7 +63,7 @@ export default function QuienesSomos() {
           <img
             src={nosotros}
             alt="Arpia Tattoo estudio"
-            className="relative w-full h-[600px] object-cover border border-[#b91c1c]/20" style={{ objectPosition: 'center -5px' }}
+            className="relative w-full h-64 md:h-[450px] lg:h-[600px] object-cover border border-[#b91c1c]/20" style={{ objectPosition: 'center -5px' }}
           />
         </div>
 

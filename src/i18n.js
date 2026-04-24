@@ -9,8 +9,8 @@ export const translations = {
     quienes: {
       tag: 'El estudio',
       titulo: 'Quiénes somos',
-      p1: 'Somos <b>Arpia Tattoo</b>, un estudio de tatuajes comprometido con el arte y la expresión personal. Cada trazo que hacemos cuenta una historia, cada diseño nace del diálogo entre el artista y quien lo lleva.',
-      p2: 'Nuestro equipo de artistas especializados en distintos estilos está listo para transformar tu idea en una obra de arte permanente. La seguridad, la higiene y la calidad son nuestra prioridad en cada sesión.',
+      p1: '<b>Arpía Tattoo</b> nace de la necesidad de crear un estudio de tatuajes al que poder llamar hogar. Un espacio en el que el arte y la creatividad se encuentran en la comodidad de estar en casa. Un lugar en el que sentirse seguros, inspirados y en calma, donde cada idea pueda desarrollarse sin prisas ni presiones externas.',
+      p2: 'Este proyecto no surge de una estructura empresarial al uso, sino de la unión de varias personas que comparten una misma forma de entender el tatuaje y la vida. Creemos que el mejor trabajo nace cuando el ambiente es honesto, tranquilo y libre de tensiones, y eso es precisamente lo que hemos querido construir.',
       btnArtistas: 'Conoce a los artistas',
       btnCita: 'Reserva cita',
     },
@@ -54,8 +54,8 @@ export const translations = {
     quienes: {
       tag: 'The studio',
       titulo: 'About us',
-      p1: 'We are <b>Arpia Tattoo</b>, a tattoo studio committed to art and personal expression. Every line we make tells a story, every design is born from the dialogue between the artist and the person who wears it.',
-      p2: 'Our team of artists, each specialised in different styles, is ready to turn your idea into a permanent work of art. Safety, hygiene and quality are our priority in every session.',
+      p1: '<b>Arpía Tattoo</b> was born out of the need to create a tattoo studio we could truly call home. A space where art and creativity meet the comfort of feeling at ease. A place to feel safe, inspired and calm, where every idea can take shape without rush or outside pressure.',
+      p2: 'This project did not come from a conventional business structure, but from a group of people who share the same way of understanding tattooing and life. We believe the best work comes when the environment is honest, relaxed and free from tension — and that is exactly what we set out to build.',
       btnArtistas: 'Meet the artists',
       btnCita: 'Book an appointment',
     },
