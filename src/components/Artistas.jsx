@@ -91,13 +91,14 @@ function ArtistaCard({ artista, lang }) {
       <div className={`flip-card-inner ${flipped ? 'flipped' : ''}`}>
 
         {/* FRONT */}
-        <div className="flip-card-front bg-[#1a1a1a] border border-gray-800 overflow-hidden">
+        <div className="flip-card-front overflow-hidden relative">
           <img
             src={artista.img}
             alt={artista.nombre}
-            className="w-full h-80 object-cover object-top"
+            className="w-full h-full object-cover object-top"
           />
-          <div className="p-5 flex items-center justify-between">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between">
             <div>
               <p className="text-[#b91c1c] text-xs tracking-[0.3em] uppercase mb-1">
                 {artista.especialidad[lang]}
@@ -109,7 +110,7 @@ function ArtistaCard({ artista, lang }) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
-              className="text-gray-500 hover:text-[#b91c1c] transition-colors"
+              className="text-gray-400 hover:text-[#b91c1c] transition-colors mb-1"
               aria-label="Instagram"
             >
               <Instagram size={20} />
