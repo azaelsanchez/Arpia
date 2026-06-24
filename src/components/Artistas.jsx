@@ -13,8 +13,11 @@ const artistas = [
     especialidad: { es: 'Tatuadora', en: 'Tattoo Artist' },
     instagram: 'sofiaspiral',
     img: imgSofia,
-    descripcion: { es: 'Pendiente de rellenar.', en: 'Coming soon.' },
-    estilos: { es: 'Pendiente de rellenar', en: 'Coming soon' },
+    descripcion: {
+      es: 'Nuestra artista especializada en tattoos a color con referencias de anime y disney. Aunque se le da bien todo: línea fina, detalles en acuarela y mucho más. Aparte de tatuar genial y ser una gran profesional del sector, te hace pasar un rato muy ameno con su carácter arrollador. Es una tía muy chula, con estilazo y no sabemos por qué... pero tiene algo con Nicolás Cage 💘',
+      en: 'Our artist specialised in colour tattoos with anime and disney references. Though she excels at everything: fine line, watercolour details and much more. On top of being an amazing tattoo artist and a true professional, she makes every session a great time with her infectious personality. She\'s super cool, has amazing style and we don\'t know why... but she has a thing for Nicolas Cage 💘',
+    },
+    estilos: { es: 'Color · Anime · Disney · Línea fina · Acuarela', en: 'Colour · Anime · Disney · Fine line · Watercolour' },
   },
   {
     nombre: 'Cristina Castillo',
