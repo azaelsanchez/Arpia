@@ -32,8 +32,11 @@ const artistas = [
     especialidad: { es: 'Tatuador', en: 'Tattoo Artist' },
     instagram: 'krea.lmk',
     img: imgMark,
-    descripcion: { es: 'Pendiente de rellenar.', en: 'Coming soon.' },
-    estilos: { es: 'Pendiente de rellenar', en: 'Coming soon' },
+    descripcion: {
+      es: 'Posiblemente el tío más chulitillo que te encuentres por la calle. Se caracteriza por su estilo New School, freehand, black work, B&N.. La verdad que consideramos que es un artista muy polifacético porque se le da muy bien todo. Si quieres llevar un buen tatuaje y ser la envidia de tu barrio.. ¡él es tu tatuador! ✌🏻',
+      en: 'Possibly the coolest guy you\'ll ever run into on the street. He\'s known for his New School, freehand, black work and B&W styles. We truly believe he\'s an incredibly versatile artist because he\'s great at everything. If you want a killer tattoo and be the envy of your neighbourhood.. he\'s your guy! ✌🏻',
+    },
+    estilos: { es: 'New School · Freehand · Black Work · B&N', en: 'New School · Freehand · Black Work · B&W' },
   },
   {
     nombre: 'Control Zeta',
