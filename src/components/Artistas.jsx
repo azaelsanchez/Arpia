@@ -24,8 +24,11 @@ const artistas = [
     especialidad: { es: 'Tatuadora', en: 'Tattoo Artist' },
     instagram: 'crisstinacastillo_',
     img: imgCristina,
-    descripcion: { es: 'Pendiente de rellenar.', en: 'Coming soon.' },
-    estilos: { es: 'Pendiente de rellenar', en: 'Coming soon' },
+    descripcion: {
+      es: 'Nuestra reina del realismo. A color, en blanco y negro, microrealismo... da igual, sus trabajos dejan a todo el mundo con la boca abierta. La encontrarás tatuando al atardecer con una cerveza en la mano, Britney Spears sonando en bucle de fondo y un poquito de salseo de por medio. Porque cicatrizar traumas es mucho mejor en buena compañía. ☕️♥️💋',
+      en: 'Our realism queen. Colour, black & grey, micro-realism... it doesn\'t matter, her work leaves everyone speechless. You\'ll find her tattooing at sunset with a beer in hand, Britney Spears blasting on repeat and a little drama on the side. Because healing traumas is always better in good company. ☕️♥️💋',
+    },
+    estilos: { es: 'Realismo a color · Realismo B&N · Microrealismo', en: 'Colour realism · B&W realism · Micro-realism' },
   },
   {
     nombre: 'Krea',
